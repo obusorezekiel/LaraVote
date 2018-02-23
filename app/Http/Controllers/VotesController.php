@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use App\Votes;
 
-class VoterController extends Controller
+class VotesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +13,7 @@ class VoterController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        //
     }
 
     /**
@@ -25,7 +23,7 @@ class VoterController extends Controller
      */
     public function create()
     {
-        return view('voter');
+        //
     }
 
     /**
@@ -36,39 +34,7 @@ class VoterController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'president' => 'required',
-            'vp_acad' => 'required',
-            'vp_admin' => 'required',
-            'gen_sec' => 'required',
-            'ass_sec' => 'required',
-            'fin_sec' => 'required',
-            'welfare' => 'required',
-            'prayer' => 'required',
-            'itt' => 'required',
-            'ret' => 'required',
-            'vybes' => 'required',
-            'mnt' => 'required',
-        ]);
-
-        $vote = new Votes;
-        $vote->president = $request->input('president');
-        $vote->vp_acad = $request->input('vp_acad');
-        $vote->vp_admin = $request->input('vp_admin');
-        $vote->gen_sec = $request->input('gen_sec');
-        $vote->fin_sec = $request->input('ass_sec');
-        $vote->ass_sec = $request->input('fin_sec');
-        $vote->welfare = $request->input('welfare');
-        $vote->prayer = $request->input('prayer');
-        $vote->itt = $request->input('itt');
-        $vote->ret = $request->input('ret');
-        $vote->vybes = $request->input('vybes');
-        $vote->mnt = $request->input('mnt');
-        $vote->save();
-
-        return redirect('/home')->with('success', 'Post Created');
-        
-
+        //
     }
 
     /**
@@ -79,7 +45,7 @@ class VoterController extends Controller
      */
     public function show($id)
     {
-        
+        //
     }
 
     /**
